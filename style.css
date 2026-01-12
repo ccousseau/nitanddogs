@@ -1,4 +1,4 @@
-/* ==== STYLES DE BASE GRAND ECRANS ==== */
+/* ==== STYLES DE BASE GRANDS ECRANS ==== */
 
 /* ==== BODY ==== */
 body {
@@ -12,31 +12,30 @@ body {
 p {
     margin-top: 0;
     margin-bottom: 10px;
+    text-align: justify;
 }
 p:hover {cursor:auto; /* enleve le chien sur le texte*/}
 
-
-h1, h2, h3, h4, header, footer, table {
-    font-family: "Clash Display";
+h1, h2, h3, h4, header, footer, table, button {
+    font-family: "Clash Display", Arial, Helvetica, sans-serif;
     letter-spacing: 1.5px;
 }
 
 h2, h3{margin-top: 1px;}
 h3 {margin-bottom: 15px; /* titre merch*/}
 
-
 /* ==== HEADER / FOOTER ==== */
 header, footer {
     position: fixed;
     width: 100%;
     z-index: 1000;
-    box-shadow: rgba(150, 150, 150, 0.265) 0px 4px 12px;
+    box-shadow: rgba(172, 172, 172, 0.457) 0px 4px 12px;
 }
 
 header {
     background-image: url('img/visuel\ youtube.png');
     background-size: cover;
-    background-position-x: -20px;
+    
     padding: 6px;
     text-align: center;
 }
@@ -44,23 +43,20 @@ header {
 footer {
     background: #222;
     bottom: 0;
-    max-height: 35px;
+    height: fit-content;
 }
 
 /* ==== HEADER MENU  ==== */
-header img{ /*nitaendogs*/
-    max-height: 95px;
+header img{ /*nitandogs*/
+    max-height: 80px;
     object-fit: cover;
     margin-left: 40px;
 }
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+nav{
+    position: relative;
+    background: transparent;
 }
-
-.nav-links {
+.navliens {
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -72,7 +68,7 @@ nav a {
     padding: 8px 15px;
     margin-bottom: 3px;
     background: #333333c9;
-    border-radius: 100px;
+    border-radius: 8px;
     border: 1px solid #555;
     font-weight: bold;
     transition: 0.3s; /*pour le hover color */
@@ -87,11 +83,15 @@ nav a:hover {
 /* === HAMBURGER ==== */
 .hamburger {
     display: none;
-    flex-direction: column;
+    flex-direction: column; /*ChatGPT pour le flex des spans */
+    cursor: pointer;
+    position: fixed;
     padding: 10px;
     background: #333;
     border-radius: 4px;
     border: 1px solid #555;
+    top: -50px;
+    left: 10px;
 }
 
 .hamburger span {
@@ -102,9 +102,22 @@ nav a:hover {
     border-radius: 1px;
 }
 
+/* === BOUTON DARK / LIGHT ==== */
 
+#darklight {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #555;
+    position: fixed;
+    z-index: 1001;
+    bottom: 7px;
+    right: 7px;
+}
 /* ==== SOCIAL FOOTER ==== */
-.social {
+.reseau {
     margin: 4px;
     display: flex;
     justify-content: center;
@@ -112,19 +125,19 @@ nav a:hover {
     gap: 20px;
 }
 
-.social p {
+.reseau p {
     margin: 0;
     font-size: 16px;
 }
 
-.social img {
+.reseau img {
     color: #fff;
     width: 21px;
     height: 21px;
     transition: 0.3s;
 }
 
-.social a:hover {
+.reseau a:hover {
     transform: scale(1.2);
 }
 
@@ -136,12 +149,12 @@ color: rgb(255, 182, 182);
 
 /* ==== MAIN ==== */
 main {
-    cursor: url('img/picto/icons8-chien-27.png'), auto;  
+    cursor: url('img/picto/icons8-chien-27.png'), auto;
     margin-left: 2%;
     margin-right: 2%;
     padding: 2%;
     position: relative;
-    top: 140px; /* en grand ecran et 80px en sarm */
+    top: 145px; /* en grand ecran */
     bottom: 60px;
 }
 
@@ -188,7 +201,7 @@ main {
     box-sizing: border-box;
     padding: 1rem;
     margin: 0.5rem 0;
-    display: flex; /* dans le flex 1 pour elements internes*/
+    display: flex; /* dans le flex1 (pour elements internes)*/
     flex-direction: column;
     align-items: center;
 }
@@ -201,7 +214,13 @@ main {
      border-radius: 10px;
 }
 
-.flexbloc_merch button{ background-color:transparent}
+.flexbloc_merch button{ 
+    background-color:transparent;
+    padding: 0px;
+    margin-left: 3px;
+    border: none;
+  
+}
 
 /* ==== GROUPE ==== */
 .mbgrp img {
@@ -242,7 +261,7 @@ main {
     font-style: italic;
 }
 
-.tour-dates td:first-child{ border-right: #ffffff73 solid 1px}
+.tour-dates td:first-child{ border-right: #ffffff73 solid 1px }
 
 .tour-dates td {
     padding: 5px;
@@ -252,11 +271,10 @@ main {
 /* ==== ACTU ==== */
 #actu_it{
     font-style: italic;
-    text-align: center;
     width: auto;  
 }
 
-
+#actu_it p{ text-align:center }
 
 
 /* ========================= */
@@ -267,6 +285,18 @@ main {
 @media screen and (max-width: 1000px) {
     body{
         font-size: 15px;
+    }
+    .reseau p {
+        font-size: 13px;
+    }
+
+    .reseau img {
+        width: 18px;
+        height: 18px;
+    }
+
+    header img{
+        max-height: 70px;
     }
 
     .flex1{
@@ -280,12 +310,12 @@ main {
 
     .galerie {
     column-count: 3;
-  }
+    }
 
-  iframe {
+    iframe {
     width: 100%;
     height: 300px;
-}
+    }
 }
 
 /* Smartphone */
@@ -294,53 +324,84 @@ main {
         font-size: 13px;
     }
 
+    .reseau p {
+        font-size: 10px;
+    }
+
+    .reseau img {
+        width: 15px;
+        height: 15px;
+    }
+
     .flexbloc_merch{
         flex: none; /* pas de flex : 1 item par ligne*/
         width: 100%;
     }
-    header img{
-        max-height: 70px;
-        margin-left: 50px;
-    }
-    nav {
-        position: relative;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        background: transparent;
-    }
+    header img{ max-height: 50px;}
+
 
     .hamburger {
         display: flex;
         position: absolute;
-        top: -70px;
-        left: 0px;
     }
 
-    .nav-links {
+    .navliens {
         display: none;
+        gap: 5px;
         flex-direction: column;
         align-items: center;
         width: 100%;
     }
 
-    .nav-links.active {
-        display: flex;
-    }
+    .navliens.active { display: flex;}
 
-    nav a {
-        width: 40%;
-        position: relative;
-        border: 1px solid #555;
-    }
+    nav a { width: 90%;}
 
-    main{
+    main {
         margin: auto;
-        top: 105px;
+        top: 75px;
     }
 
     .galerie {
     column-count: 2;
-    
+    }
 }
+
+/* ========================= */
+/* ==== IMPRESSION ==== */
+/* ========================= */
+
+@media print {
+    body, .flexbloc, .flexbloc_merch{
+        background-color: white;
+        color: black;
+    }
+
+    header nav,.hamburger, footer {
+        display: none
+    }
+}
+
+.lightmode,
+.lightmode #flexgrp,
+.lightmode #flexaccueil,
+.lightmode #flexvid,
+.lightmode .flexbloc, 
+.lightmode .flexbloc_merch, 
+.lightmode .galerie p,
+.lightmode footer, 
+.lightmode header {
+    background-color: #ffffff;
+    background-image: none;
+    color: #000000;
+}
+
+
+.lightmode header img,
+.lightmode .reseau img{
+    filter: invert(100%);
+}
+
+.lightmode .flexbloc_merch button {
+    background-color: #000000;
 }
