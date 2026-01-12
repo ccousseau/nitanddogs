@@ -329,8 +329,11 @@ main {
     }
     .reseau{
         justify-content: left;
-        margin-left: 5px;
+        margin-left: 8px;
         gap: 7px
+    }
+    .mbgrp img {
+    max-width: 150px;
     }
 
     #darklight {
