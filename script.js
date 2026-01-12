@@ -19,7 +19,7 @@ function lightMode() {
    let bouton = document.getElementById("darklight");
     if (bouton.innerHTML === "Light") {
         bouton.innerHTML = "Dark";
-        bouton.style.backgroundColor = "black"
+        bouton.style.backgroundColor = "#333"
         bouton.style.color = "white";
     } else {
         bouton.innerHTML = "Light";

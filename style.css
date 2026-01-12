@@ -35,7 +35,7 @@ header, footer {
 header {
     background-image: url('img/visuel\ youtube.png');
     background-size: cover;
-    
+    box-sizing: border-box;
     padding: 6px;
     text-align: center;
 }
@@ -50,7 +50,6 @@ footer {
 header img{ /*nitandogs*/
     max-height: 80px;
     object-fit: cover;
-    margin-left: 40px;
 }
 nav{
     position: relative;
@@ -107,14 +106,14 @@ nav a:hover {
 #darklight {
     display: flex;
     flex-direction: column;
-    padding: 0px;
-    padding-left: 5px;
-    padding-right: 5px;
-    border: 1px solid #555;
+    margin: 6px;
+    border: none;
+    border-radius: 2px ;
+    box-shadow: rgba(65, 65, 65, 0.119) 0px 2px 3px;;
     position: fixed;
     z-index: 1001;
-    bottom: 7px;
-    right: 7px;
+    bottom: 0px;
+    right: 0px;
 }
 /* ==== SOCIAL FOOTER ==== */
 .reseau {
@@ -286,6 +285,11 @@ main {
     body{
         font-size: 15px;
     }
+    
+    #darklight {
+        font-size: 13px;
+    }
+
     .reseau p {
         font-size: 13px;
     }
@@ -323,6 +327,15 @@ main {
     body{
         font-size: 13px;
     }
+    .reseau{
+        justify-content: left;
+        margin-left: 5px;
+        gap: 7px
+    }
+
+    #darklight {
+        font-size: 11px;
+    }
 
     .reseau p {
         font-size: 10px;
@@ -337,9 +350,11 @@ main {
         flex: none; /* pas de flex : 1 item par ligne*/
         width: 100%;
     }
-    header img{ max-height: 50px;}
-
-
+    header img{ 
+        max-height: 50px;
+      
+    }
+  
     .hamburger {
         display: flex;
         position: absolute;
@@ -351,11 +366,17 @@ main {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
     }
 
-    .navliens.active { display: flex;}
+    .navliens.active { display: flex; }
 
-    nav a { width: 90%;}
+    nav a { 
+        width: 96%;
+        box-sizing: border-box;
+    }
 
     main {
         margin: auto;
@@ -382,6 +403,10 @@ main {
     }
 }
 
+/* ========================= */
+/* ==== LIGHTMODE ==== */
+/* ========================= */
+
 .lightmode,
 .lightmode #flexgrp,
 .lightmode #flexaccueil,
@@ -396,12 +421,14 @@ main {
     color: #000000;
 }
 
+.lightmode footer,
+.lightmode header { background-color: #dedede }
+
+.lightmode main{
+    cursor:auto
+}
 
 .lightmode header img,
-.lightmode .reseau img{
-    filter: invert(100%);
-}
+.lightmode .reseau img{ filter: invert(100%) }
 
-.lightmode .flexbloc_merch button {
-    background-color: #000000;
-}
+.lightmode .flexbloc_merch button { background-color: #000000 }
