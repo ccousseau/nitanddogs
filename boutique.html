@@ -2,17 +2,22 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+
+        <!-- Balises de référencement-->
+        <meta name="description" content="Site officiel du groupe de musique nit and dogs : actualités, concerts, vidéos, boutique, présentation du projet et des membres.">
+        <meta name="keywords" content="jazz, musique, groupe, Nit and Dogs, concert, boutique, vinyle, t-shirt, merchandising, contemporain, actualités, médias">
+        <meta name="author" content="nit and dogs">
+        <meta name="robots" content="index, follow">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f=clash-display@400,500,600,700&display=swap" rel="stylesheet">
         <script src="script.js"></script>
         <title>Boutique - NIT AND DOGS</title>
     </head>
     <body>
     
-        <button id="darklight" alt="dark/light mode" title="dark/light mode" onclick="lightMode()">Light</button>
-
-
+        <button id="theme" title="dark/light mode" onclick="lightMode()">mode</button>
 
         <header>
             <img src="img/nitendogs.png" alt="Logo Nit and Dogs" id="logo">
@@ -32,15 +37,17 @@
         <main>
             <h2>Boutique</h2>
 
-            <section class="flex1" >
-                <div class="flexbloc_merch">
+            <section class="flex1">
+                <div class="flexbloc_merch"> <!-- ici des flexbloc_merch différents de la classe
+                    flexbloc des autres pages afin d'agencer sur 3 colonnes cette fois ci
+                    ET ajouté flex interne pour mettre les élément en colones centrées à dans les blocs-->
                     <h3><em>Sky Telelecom</em></h3>
                     <p>Vinyle album</p>
-                    <img class="obj" src="img/sky_tel.jpg" alt="Sky Telelecom - Vinyle album" title="Sky Telelecom - Vinyle album" width="40%">
+                    <img class="obj" src="img/sky_tel.jpg" alt="Sky Telelecom - Vinyle album" title="Sky Telelecom - Vinyle album">
                     <p>15€</p>
-                    <div class="achat">
-                        <input type="number" min="0" max="10" value="0" title="quantité" alt="quantité">
-                        <button onclick="addToCart('sky_tel')"><img src="img/picto/icons8-ajouter-au-panier-30.png" title="Ajouter au panier" alt="Ajouter au panier"></button>
+                    <div class="achat"> <!-- sert uniquement à conserver les élément à l'intérieur en ligne -->
+                        <input type="number" min="0" max="10" value="0" title="quantité">
+                        <button><img src="img/picto/icons8-ajouter-au-panier-30.png" title="Ajouter au panier" alt="Ajouter au panier"></button>
                     </div>
                 </div>
 
@@ -50,40 +57,38 @@
                     <img class="obj" src="img/tshirt.png" alt="T-shirt Chien" title="T-shirt Chien">
                     <p>25€ — taille unique</p>
                     <div class="achat">
-                        <input type="number" min="0" max="10" value="0" title="quantité" alt="quantité">
-                        <button onclick="addToCart('sky_tel')"><img src="img/picto/icons8-ajouter-au-panier-30.png" title="Ajouter au panier" alt="Ajouter au panier"></button>
+                        <input type="number" min="0" max="10" value="0" title="quantité">
+                        <button><img src="img/picto/icons8-ajouter-au-panier-30.png" title="Ajouter au panier" alt="Ajouter au panier"></button>
                     </div>
                 </div>
 
                 <div class="flexbloc_merch">
                     <h3>Calendrier</h3>  
                     <p>picnic nit and dogs</p>                  
-                    <img class="obj" src="img/calend.png" alt="Calendrier" title="Calendrier">
+                    <img class="obj" src="img/calend.png" alt="Calendrier picnic nit and dogs" title="Calendrier picnic nit and dogs">
                     <p>20€</p>
                     <div class="achat">
-                        <input type="number" min="0" max="10" value="0" title="quantité" alt="quantité">
-                        <button onclick="addToCart('sky_tel')"><img src="img/picto/icons8-ajouter-au-panier-30.png" title="Ajouter au panier" alt="Ajouter au panier"></button>
+                        <input type="number" min="0" max="10" value="0" title="quantité">
+                        <button><img src="img/picto/icons8-ajouter-au-panier-30.png" title="Ajouter au panier" alt="Ajouter au panier"></button>
                     </div>
                 </div>
             </section>
         </main>
+
+
         <footer>
             <div class="reseau">
                 <p>© 2025 NIT AND DOGS</p>
-                <a href="https://www.instagram.com/nit_and_dogs/" target="_blank" aria-label="Instagram">
-                    <!-- Instagram -->
-                <img src="img/picto/icons8-instagram-30.png" title="Instagram" alt="Instagram">
+                <a href="https://www.instagram.com/nit_and_dogs/">
+                    <img src="img/picto/icons8-instagram-30.png" title="Instagram" alt="Instagram">
                 </a>
-                <a href="https://autresrecords.bandcamp.com/album/sky-telecom" target="_blank" aria-label="Bandcamp">
-                    <!-- Bandcamp -->
+                <a href="https://autresrecords.bandcamp.com/album/sky-telecom">   
                     <img src="img/picto/icons8-bandcamp-24.png" title="Bandcamp" alt="Bandcamp">
                 </a>
-                <a href="https://open.spotify.com/intl-fr/artist/6n06z5OJdHTgWvWyv8mF8k" target="_blank" aria-label="Spotify">
-                    <!-- Spotify -->
+                <a href="https://open.spotify.com/intl-fr/artist/6n06z5OJdHTgWvWyv8mF8k">
                     <img src="img/picto/icons8-spotify-30.png" title="Spotify" alt="Spotify">
                 </a>
-                <a href="https://www.youtube.com/@rosedehors/videos" target="_blank" aria-label="YouTube">
-                    <!-- Spotify -->
+                <a href="https://www.youtube.com/@rosedehors/videos">
                     <img src="img/picto/icons8-youtube-30.png" title="YouTube" alt="YouTube">
                 </a>
             </div>

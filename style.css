@@ -1,4 +1,9 @@
+/* ======================================================================= */
+/* ======================================================================= */
+
+/* ====================================== */
 /* ==== STYLES DE BASE GRANDS ECRANS ==== */
+/* ====================================== */
 
 /* ==== BODY ==== */
 body {
@@ -24,7 +29,16 @@ h1, h2, h3, h4, header, footer, table, button {
 h2, h3{margin-top: 1px;}
 h3 {margin-bottom: 15px; /* titre merch*/}
 
+
+/* ==== pointeurs "puce" ==== */
+a,  main img, .hamburger{
+cursor: url('img/picto/icons8-bug-30.png'), auto ; 
+color: rgb(255, 182, 182);
+}
+/* ======================================================================= */
+
 /* ==== HEADER / FOOTER ==== */
+
 header, footer {
     position: fixed;
     width: 100%;
@@ -36,6 +50,7 @@ header {
     background-image: url('img/visuel\ youtube.png');
     background-size: cover;
     box-sizing: border-box;
+    height: fit-content;
     padding: 6px;
     text-align: center;
 }
@@ -46,7 +61,7 @@ footer {
     height: fit-content;
 }
 
-/* ==== HEADER MENU  ==== */
+/* ==== H menu navigation  ==== */
 header img{ /*nitandogs*/
     max-height: 80px;
     object-fit: cover;
@@ -79,7 +94,7 @@ nav a:hover {
     color: #111;   
 }
 
-/* === HAMBURGER ==== */
+/* === H hamburger ==== */
 .hamburger {
     display: none;
     flex-direction: column; /*ChatGPT pour le flex des spans */
@@ -101,9 +116,8 @@ nav a:hover {
     border-radius: 1px;
 }
 
-/* === BOUTON DARK / LIGHT ==== */
-
-#darklight {
+/* === F theme ==== */
+#theme {
     display: flex;
     flex-direction: column;
     margin: 6px;
@@ -115,7 +129,8 @@ nav a:hover {
     bottom: 0px;
     right: 0px;
 }
-/* ==== SOCIAL FOOTER ==== */
+
+/* ====  F réseaux sociaux ==== */
 .reseau {
     margin: 4px;
     display: flex;
@@ -140,29 +155,32 @@ nav a:hover {
     transform: scale(1.2);
 }
 
-/* ==== POINTEURS PUCE ==== */
-a,  .galerie img, .hamburger{
-cursor: url('img/picto/icons8-bug-30.png'), auto ; 
-color: rgb(255, 182, 182);
-}
+
+/* ======================================================================= */
 
 /* ==== MAIN ==== */
+
 main {
     cursor: url('img/picto/icons8-chien-27.png'), auto;
     margin-left: 2%;
     margin-right: 2%;
     padding: 2%;
+    padding-bottom: 30px;
     position: relative;
     top: 145px; /* en grand ecran */
-    bottom: 60px;
 }
 
-/* ==== FLEX ==== */
+
+/* ======================================================================= */
+
+/* ==== FLEXS ==== */
+
 .flex1 {
     display: flex;
     flex-wrap: wrap;
     gap: 1.25rem;
     flex-direction: row;
+
 }
 
 /* FLEX par id*/
@@ -205,7 +223,10 @@ main {
     align-items: center;
 }
 
+/* ======================================================================= */
+
 /* ==== MERCH ==== */
+
 .obj {
      width: 90%;
      max-width: 600px;
@@ -221,7 +242,10 @@ main {
   
 }
 
+/* ======================================================================= */
+
 /* ==== GROUPE ==== */
+
 .mbgrp img {
     margin: 0.5rem;
     max-width: 200px;
@@ -233,7 +257,10 @@ main {
 .floatright {float: right}
 
 
+/* ======================================================================= */
+
 /* ==== GALERIE ==== */
+
 .galerie {
     column-count: 5; /* Nombre de colonnes */
     column-gap: 10px
@@ -251,8 +278,11 @@ main {
     background: linear-gradient(180deg, #33333339, #111);
 }
 
+/* ======================================================================= */
 
-/* ==== TABLEAU  CONCERT ==== */
+/* ==== ACCEUIL ==== */
+
+/* tableau */
 .tour-dates {
     border: #ffffff73 solid 1px;;
     width: 100%;
@@ -267,7 +297,7 @@ main {
     text-align: center;
 }
 
-/* ==== ACTU ==== */
+/* actus */
 #actu_it{
     font-style: italic;
     width: auto;  
@@ -275,6 +305,17 @@ main {
 
 #actu_it p{ text-align:center }
 
+
+/*iframe*/
+iframe {
+    width: 100%;
+    height: 500px; /* hauteur fixe pour les vidéos sinon débordement*/
+    border: none;
+
+}
+
+/* ======================================================================= */
+/* ======================================================================= */
 
 /* ========================= */
 /* ==== RESPONSIVE ==== */
@@ -286,7 +327,7 @@ main {
         font-size: 15px;
     }
     
-    #darklight {
+    #theme {
         font-size: 13px;
     }
 
@@ -318,25 +359,26 @@ main {
 
     iframe {
     width: 100%;
-    height: 300px;
+    height: 400px; /* hauteur fixe pour les vidéos sinon débordement*/ 
     }
 }
 
 /* Smartphone */
+/* beaucoup de modifs apres avoir testé sur mon telephone ..*/
 @media screen and (max-width: 600px) {
     body{
         font-size: 13px;
     }
-    .reseau{
+    .reseau{ /* décentré à gauche et gap abaissé, sinon débordement sous le boutons dark/light*/
         justify-content: left;
         margin-left: 8px;
-        gap: 7px
+        gap: 7px 
     }
     .mbgrp img {
     max-width: 150px;
     }
 
-    #darklight {
+    #theme {
         font-size: 11px;
     }
 
@@ -354,17 +396,17 @@ main {
         width: 100%;
     }
     header img{ 
-        max-height: 50px;
-      
-    }
+        max-height: 50px;}
   
     .hamburger {
-        display: flex;
+        display: flex; /* en screen normal: display: none; */
         position: absolute;
     }
 
-    .navliens {
-        display: none;
+    .navliens { 
+        display: none; /* par défaut ils sont masqués */
+        top: 100%;
+        left: 0;
         gap: 5px;
         flex-direction: column;
         align-items: center;
@@ -374,7 +416,8 @@ main {
         margin: 0;
     }
 
-    .navliens.active { display: flex; }
+    .navliens.active { display: flex; } /* quand "active" est ajouté au nom de la classe 
+    (grâce à l'écouteur d'événement JS), ils sont affichés */
 
     nav a { 
         width: 96%;
@@ -391,6 +434,9 @@ main {
     }
 }
 
+
+/* ======================================================================= */
+
 /* ========================= */
 /* ==== IMPRESSION ==== */
 /* ========================= */
@@ -405,11 +451,14 @@ main {
         display: none
     }
 }
+/* ======================================================================= */
 
 /* ========================= */
 /* ==== LIGHTMODE ==== */
 /* ========================= */
+/* Style clair personnalisé, surements pas la meilleure façon de faire mais ça fonctionne */
 
+/* /* noir sur blanc  */
 .lightmode,
 .lightmode #flexgrp,
 .lightmode #flexaccueil,
@@ -424,14 +473,23 @@ main {
     color: #000000;
 }
 
+/* du gris pour header footer afin de facilement délimiter les éléments fixes*/
 .lightmode footer,
 .lightmode header { background-color: #dedede }
 
+/* les curseurs personnalisés sont blanc avec trop peu de contour 
+donc trop peu visible sur fond blanc, je les enlève */
 .lightmode main{
     cursor:auto
 }
 
+/* mise en negatifs des images pictogrammes et logo */
 .lightmode header img,
 .lightmode .reseau img{ filter: invert(100%) }
+
+.lightmode #theme{
+    background-color: #333;
+    color: #ffffff;
+}
 
 .lightmode .flexbloc_merch button { background-color: #000000 }

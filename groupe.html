@@ -2,17 +2,22 @@
 <html lang="fr">
     <head>
         <meta charset="UTF-8">
+
+        <!-- Balises de référencement-->
+        <meta name="description" content="Site officiel du groupe de musique nit and dogs : actualités, concerts, vidéos, boutique, présentation du projet et des membres.">
+        <meta name="keywords" content="jazz, musique, groupe, Nit and Dogs, concert, boutique, vinyle, t-shirt, merchandising, contemporain, actualités, médias">
+        <meta name="author" content="nit and dogs">
+        <meta name="robots" content="index, follow">
+
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="style.css">
-        <link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500,600,700&display=swap" rel="stylesheet">
+        <link href="https://api.fontshare.com/v2/css?f=clash-display@400,500,600,700&display=swap" rel="stylesheet">
             <script src="script.js"></script>
         <title>Le projet - NIT AND DOGS</title>
     </head>
-
     <body>
 
-                <button id="darklight" alt="dark/light mode" title="dark/light mode" onclick="lightMode()">Light</button>
-
+        <button id="theme" title="dark/light mode" onclick="lightMode()">mode</button>
 
         <header>
             <img src="img/nitendogs.png" alt="Logo Nit and Dogs" id="logo">
@@ -27,8 +32,8 @@
                     <span></span><span></span><span></span>
                 </div>
             </nav>
-            <button id="darklight" alt="dark/light mode" title="dark/light mode" onclick="lightMode()">light</button>
         </header>
+
         <main>
             <h2>Le projet </h2>
             <p>nit and dogs se situe à l’intersection d’une folk expérimentale et d’une pop noise éclatante. Oscillant entre féérie acoustique et crépitements électroniques, l’univers de ce quartet empreint de surréalisme est peuplé d’images, de textures et d’émotions contrastées. Influencée par la bande dessinée, Rose Dehors crée dans chaque morceau une planche fantastique et colorée, qui donne vie à des personnages aux frontières du réel. Les bruits et objets du quotidien se mêlent aux explosions des cordes et des souffles.
@@ -37,13 +42,13 @@
             </p>
             <p>En s’inspirant d’artistes tels que Björk, Saya Gray, Radiohead et Steve Reich, nit and dogs crée une fusion singulière de mélodies et rythmiques électrisantes. La musique se nourrit d’improvisations et de performances vocales exaltées, tout en étant soutenue par une base sonore puissante et surprenante. Une expérience musicale où l’attention se porte sur l’étrangeté de la vie, comme une invitation à explorer l’invisible.
             </p>
-            </br>
+            <br>
 
-            <section class="flex1"id="flexgrp">
+            <section class="flex1" id="flexgrp"> <!-- même classe flex que pour l'accueil mais avec id différent pour quelques regles css -->
                 <div class="flexbloc">
-                    <h3>Rose Dehors</h3>
-                    <div class="mbgrp">
-                        <img src="img/1Rose oui.jpg" alt="Rose Dehors" class="floatleft">
+                    <div class="mbgrp"><!-- pour css des images-->
+                        <h3>Rose Dehors</h3>
+                        <img src="img/1Rose oui.jpg" alt="Rose Dehors" class="floatleft"> <!-- me permet d'alterner le sens de la prop css "float"-->
                         <p>Rose est à la fois tromboniste, sacqueboutiste (ancêtre du trombone), flûtiste et compositrice. Rose est une jeune artiste audacieuse et talentueuse. Polyvalente et d’une infatigable curiosité, elle ne cesse de surprendre en navigant avec aplomb à travers les époques et les genres : du jazz aux musiques improvisées, des trésors de la musique ancienne à l’audace de la musique contemporaine.
                         Depuis 2024, Rose exprime dans son groupe nit and dogs, lauréat jazz migration #11, tout son potentiel créatif. Cet ensemble lui permet de faire entendre son esthétique, ses créations, sa voix.
                         Elle participe à l’Orchestre National des Jeunes de l’ONJ #2 en 2019. En 2026, elle est lauréate de JAZZ WIZZ #2 en partenariat avec le festival Jazz sous les pommiers et les Gémeaux.
@@ -53,8 +58,8 @@
                 </div>
 
                 <div class="flexbloc">
-                    <h3>Paolo Rezze</h3>
-                    <div class="mbgrp">
+                    <div class="mbgrp"><!-- pour css des images-->
+                        <h3>Paolo Rezze</h3>
                         <img src="img/1PAOLO uoi.jpg" alt="Paolo Rezze" class="floatleft">
                         <p>Violoncelliste, bassiste et guitariste aux caractère musical bien affirmé, Paolo Rezze fait ses armes sur des grandes scènes à l’international avec le duo de musiques électroniques Odalie depuis 8 ans, en coopération avec le label de Max Cooper, Mesh.
                         Il participe aux côtés de Vincent Segal à la création du troisième volet de la pièce de théâtre « la chambre de l’écrivain », mis en scène par Marc Lainé à la comédie de Valence.
@@ -65,8 +70,8 @@
                 </div>
 
                 <div class="flexbloc">
-                    <h3>Raphael Gautier</h3>
-                    <div class="mbgrp">
+                    <div class="mbgrp"><!-- pour css des images-->
+                        <h3>Raphael Gautier</h3>
                         <img src="img/1RAPH OUI.jpg" alt="Raphael Gautier" class="floatright">
                         <p>Raphael Gautier, guitariste, jongle, virevolte entre l’improvisation expérimentale et le rock indé. Créateur prolifique, il remporte le prix de composition SACEM avec son projet Rotor en 2019.
                         Son duo « Louise et Michel » est également deux fois finaliste du dispositif Jazz Migration et sort un album sous l’égide du Tricollectif en octobre 2025.
@@ -77,8 +82,8 @@
                 </div>
                 
                 <div class="flexbloc">
-                    <h3>Lou Ferrand</h3>
-                    <div class="mbgrp">
+                    <div class="mbgrp"><!-- pour css des images-->
+                        <h3>Lou Ferrand</h3>
                         <img src="img/1LOU oui.jpg" alt="Lou Ferrand" class="floatright">
                         <p>Lou Ferrand, amie de promotion de Rose Dehors, est une étudiante en jazz et musiques improvisées au CNSM de Paris. Elle se démarque particulièrement par son audace avant-gardiste et sa présence musicale vibrante. 
                         Elle participe en parallèle de ses études à plusieurs ensembles de la scène parisienne de musiques expérimentales comme dans son duo de musiques électroniques Lou+Damien ou avec son trio de destructuration de chansons et recherche d’espaces liminaux Mélody Mauvaise. Elle garde un pied en Occitanie en y participant à des projets comme Ipazia, trio instrumental éthérélectique finaliste de Jazz Migration 2025, ou le grand ensemble de jazz symphonique Wave Motion.
@@ -88,23 +93,20 @@
             </section>
         </main>
         
+
         <footer>
             <div class="reseau">
                 <p>© 2025 NIT AND DOGS</p>
-                <a href="https://www.instagram.com/nit_and_dogs/" target="_blank" aria-label="Instagram">
-                    <!-- Instagram -->
-                <img src="img/picto/icons8-instagram-30.png" title="Instagram" alt="Instagram">
+                <a href="https://www.instagram.com/nit_and_dogs/">
+                    <img src="img/picto/icons8-instagram-30.png" title="Instagram" alt="Instagram">
                 </a>
-                <a href="https://autresrecords.bandcamp.com/album/sky-telecom" target="_blank" aria-label="Bandcamp">
-                    <!-- Bandcamp -->
+                <a href="https://autresrecords.bandcamp.com/album/sky-telecom">   
                     <img src="img/picto/icons8-bandcamp-24.png" title="Bandcamp" alt="Bandcamp">
                 </a>
-                <a href="https://open.spotify.com/intl-fr/artist/6n06z5OJdHTgWvWyv8mF8k" target="_blank" aria-label="Spotify">
-                    <!-- Spotify -->
+                <a href="https://open.spotify.com/intl-fr/artist/6n06z5OJdHTgWvWyv8mF8k">
                     <img src="img/picto/icons8-spotify-30.png" title="Spotify" alt="Spotify">
                 </a>
-                <a href="https://www.youtube.com/@rosedehors/videos" target="_blank" aria-label="YouTube">
-                    <!-- Spotify -->
+                <a href="https://www.youtube.com/@rosedehors/videos">
                     <img src="img/picto/icons8-youtube-30.png" title="YouTube" alt="YouTube">
                 </a>
             </div>
